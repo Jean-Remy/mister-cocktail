@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <h2> Add a dose for the <%= @cocktail.name %></h2>
       <%= simple_form_for [@cocktail, @dose] do |f| %>
-        <%= f.input :ingredient_name, label: "Which ingredient?", collection: @ingredients %>
+        <%= f.input :ingredient, label: "Which ingredient?", collection: @ingredients %>
         <%= f.input :description %>
         <%= f.button :submit, class: "btn-primary"%>
       <% end %>

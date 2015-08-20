@@ -1,4 +1,30 @@
 <%= render "banner", cocktail: @cocktail.name %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+        <h2 class="text-center"> Recipe </h2>
+        <ul class="list-group text-center">
+          <% @cocktail.doses.each do |dose|%>
+            <li>
+              <%= dose.description %>
+              <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), :method => :delete %>
+            </li>
+          <% end %>
+        </ul>
+        <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    </div>
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+        <h2 class="text-center"> Raw Ingredients </h2>
+        <ul class="list-group text-center">
+          <% @cocktail.doses.each do |dose|%>
+            <li><%= dose.ingredient.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
