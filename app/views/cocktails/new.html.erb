@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h2> Your new Cocktail</h2>
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, label: "Cocktail name"%>
+        <%= f.input :picture, label: "Add the url of a nice picture" %>
+        <%= f.button :submit, class: "btn-primary"%>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+

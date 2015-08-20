@@ -1,0 +1,17 @@
+<nav class="navbar-wagon">
+  <div class="container navbar-wagon-container">
+
+    <%=link_to cocktails_path do %>
+      <%= image_tag "logo.png", width: "50px" %>
+    <%end%>
+
+    <form action="" class="navbar-wagon-search">
+      <input type="text" class="navbar-wagon-search-input" placeholder="Search for cocktails">
+      <button type="submit" class="navbar-wagon-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+    <hr>
+    <%= link_to t(".top_call_to_action", default: "Add a new cocktail"), new_cocktail_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+  </div>
+</nav>
