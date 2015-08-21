@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <h2 class="text-center"> Recipe </h2>
-      <ul class="list-group text-center">
+      <ul class="list-group list-unstyled text-center">
         <% @cocktail.doses.each do |dose|%>
           <li>
             <%= dose.description %> <%= dose.ingredient.name %> |
