@@ -1,11 +1,6 @@
 class DosesController < ApplicationController
   before_action :find_cocktail
 
-  def new
-    @dose = Dose.new
-    @ingredients = Ingredient.all
-  end
-
   def create
     @dose = @cocktail.doses.build(dose_params)
     if @dose.save
