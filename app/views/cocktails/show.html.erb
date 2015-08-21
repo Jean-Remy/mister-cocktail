@@ -6,8 +6,10 @@
       <ul class="list-group text-center">
         <% @cocktail.doses.each do |dose|%>
           <li>
-            <%= dose.description %>
-            <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), :method => :delete %>
+            <%= dose.description %> |
+            <%= link_to cocktail_dose_path(@cocktail, dose), :method => :delete do %>
+              <i class="fa fa-trash-o"></i>
+            <%end%>
           </li>
         <% end %>
       </ul>
